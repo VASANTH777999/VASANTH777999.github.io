@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit List</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      let fruits = [];
+
+      function del(value) {
+        fruits = fruits.filter((e) => e !== value);
+        dispFruits();
+      }
+
+      function search() {
+        const value = document.getElementById("txt1").value.trim();
+        const filtered = fruits.filter((e) => e === value);
+        let listHTML = filtered
+          .map(
+            (fruit) =>
+              `<li>${fruit} <button onclick="del('${fruit}')">Delete</button></li>`
+          )
+          .join("");
+        document.getElementById("fruitList").innerHTML = listHTML;
+      }
+
+      function dispFruits() {
+        let listHTML = fruits
+          .map(
+            (fruit) =>
+              `<li>${fruit} <button class="c"  onclick="del('${fruit}')">Delete</button></li>`
+          )
+          .join("");
+        document.getElementById("fruitList").innerHTML = listHTML;
+      }
+
+      function add() {
+        const input = document.getElementById("txt1").value.trim();
+        if (input) {
+          fruits.push(input);
+          dispFruits();
+          document.getElementById("txt1").value = ""; 
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1 class="d" >OBJECTIVE OF THE ASSIGNMENT - </h1>
+      <h3> Fruit List</h3>
+      <input type="text" id="txt1" placeholder="Enter fruit name" />
+      <button class="a" onclick="add()">Add</button>
+      <button class="b" onclick="search()">Search</button>
+      <ul id="fruitList"></ul>
+    </div>
+  </body>
+</html>

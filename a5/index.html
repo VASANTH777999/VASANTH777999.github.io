@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script>
+    function showall() {
+      const a = document.getElementById('text1').value;
+      const b = document.getElementById('text2').value;
+      const c = document.getElementById('text3').value;
+
+      document.writeln("Name: " + a + "<br>");
+      document.writeln("Email: " + b + "<br>");
+      document.writeln("Password: " + c + "<br>");
+    }
+  </script>
+</head>
+<body>
+ <center><h3 class="b"> OBJECTIVE OF THIS ASSIGNMENT -</h3></center> 
+  <ul> <li> Take details from user about username , user email, password</li>
+  <li> print the User entered  Details.</li></ul>
+  <input type="text" id="text1" placeholder="name">
+  <input type="text" id="text2" placeholder="email">
+  <input type="password" id="text3" placeholder="password">
+  <button class="a" onclick="showall()">Submit</button>
+</body>
+</html>

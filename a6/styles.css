@@ -1,0 +1,10 @@
+body{
+  padding: 25px;
+}
+.title {
+	color: #5C6AC4;
+}
+.a,.b,.c,.d{
+    color: blue;
+    background-color: yellow;
+}

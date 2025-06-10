@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css"/>
+  <title>Show All Operations</title>
+  <script>
+    function add(){
+      const num1 = Number(document.getElementById('input1').value);
+      const num2 = Number(document.getElementById('input2').value);
+      alert("Addition: " + (num1 + num2));
+    }
+    function sub(){
+      const num1 = Number(document.getElementById('input1').value);
+      const num2 = Number(document.getElementById('input2').value);
+      alert("Subtraction: " + (num1 - num2));
+    }
+    function mul(){
+      const num1 = Number(document.getElementById('input1').value);
+      const num2 = Number(document.getElementById('input2').value);
+      alert("Multiplication: " + (num1 * num2));
+    }
+    function div(){
+      const num1 = Number(document.getElementById('input1').value);
+      const num2 = Number(document.getElementById('input2').value);
+      if (num2 !== 0) {
+        alert("Division: " + (num1 / num2));
+      } else {
+        alert("Division: Not possible (cannot divide by zero)");
+      }
+    
+    }
+
+  </script>
+</head>
+<body>
+  <h1 class="x"> OBJECTIVE OF ASSIGNMENT -</h1>
+  <ul><li>User can enter any two no to perform Arithmetic Function.</li>
+  <li>User need to select which function he want to perform and click the specific button.</li></ul>
+  <input type="number" id="input1" placeholder="Enter 1st number">
+  <input type="number" id="input2" placeholder="Enter 2nd number">
+  <button class="a"   onclick="add()">Addition</button>
+   <button class="b"   onclick="sub()">Subtraction</button>
+    <button class="c"   onclick="mul()">Multiplication</button>
+     <button class="d"   onclick="div()">Division</button>
+</body>
+</html>
